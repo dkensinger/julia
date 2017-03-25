@@ -35,13 +35,13 @@ end
 
 
 params0 = [.1,.2,.3,.4,.5]
-optimum = optimize(loglike,params0,method=:cg)
+optimum = optimize(loglike, params0, LBFGS())
 MLE = optimum.minimum
 MLE[5] = exp(MLE[5])
 println(MLE)
 
 
-optimum = optimize(loglike,params0,method=:nelder_mead)
+optimum = optimize(loglike,params0,NelderMead())
 MLE = optimum.minimum
 MLE[5] = exp(MLE[5])
 println(MLE)

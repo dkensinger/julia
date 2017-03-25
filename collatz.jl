@@ -1,6 +1,6 @@
 using Gadfly
 
-function collatz (n)
+function collatz(n)
         step = 1
         while n > 1
                 step = step + 1
